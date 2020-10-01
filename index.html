@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CONNECT 4</title>
+    <script src="p5.js"></script>
+    <!-- <script src="p5.sound.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script src="scripts/sketch.js"></script>
+    <script src="scripts/board.js"></script>
+    <script src="scripts/column.js"></script>
+    <script src="scripts/pod.js"></script>
+    <script src="scripts/winner.js"></script>
+    <script src="scripts/minimax/minimax.js"></script>
+    <script src="scripts/minimax/minimaxOffense.js"></script>
+    <script src="scripts/minimax/minimaxDefense.js"></script>
+    <!-- <script src="test.js"></script> -->
+    <h1 style="font-size: 2.3em; font-weight: bolder">CONNECT 4</h1>
+    <h3 id="think">AI thinking...</h3>
+    <div class="boxLeft">
+      <h1 id="winnerLeft">Player wins!</h1>
+    </div>
+    <div class="instructions">
+      <h4>Connect 4 pods in a row to win.</h4>
+      <h4>Connection can be: horizontal, vertical or diagonal.</h4>
+      <h4>Click on a column to put down a pod.</h4>
+      <h4>Press 'R' to restart the game.</h4>
+      <h5 style="padding-top: 25px; font-size: medium">
+        Made by: dsijakovski98
+      </h5>
+    </div>
+
+    <div class="buttonBox">
+      <button id="newGame">NEW GAME</button>
+      <button id="reset">RESET GAME</button>
+      <!-- <hr> -->
+      <div class="cols">
+        <button id="col7">7 x 7</button>
+        <button id="col8">8 x 8</button>
+        <br />
+        <button id="col9">9 x 9</button>
+        <button id="col10">10 x 10</button>
+      </div>
+    </div>
+
+    <div class="boxRight">
+      <h1 id="winnerRight">Player wins!</h1>
+    </div>
+
+    <div class="mainMenu">
+      <button id="PvP">2 Players</button>
+      <!-- <button id="AI">Player vs Computer</button> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+* BOARD:
+
+	0_______1_______2_______3_______4_______5_______6_______						
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|-------|-------|-------|-------|-------|-------|-------|
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|-------|-------|-------|-------|-------|-------|-------|
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|-------|-------|-------|-------|-------|-------|-------|
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|-------|-------|-------|-------|-------|-------|-------|
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|-------|-------|-------|-------|-------|-------|-------|
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|-------|-------|-------|-------|-------|-------|-------|
+	|		|		|		|		|		|		|		|
+	|		|		|		|		|		|		|		|
+	|_______|_______|_______|_______|_______|_______|_______|
+	
+			board[7][7] -> columns x rows
+			
+* Each column keeps track of what level its filled at
+
+-------------------------------------------------------------------------------
+
+
+* MINIMAX:
+
+	0. Dummy case
+		if (depth == 0) => return result (evaluate board)
+	
+	1. Set best
+		if (player)  => best = -Inf MAXIMIZING PLAYER
+		if (!player) => best = +Inf MINIMIZING PLAYER
+	
+	2. Get next move & set result
+		result = minimax (depth-1)
+		if (player)  MAX
+			if result > best => best = result
+		if (!player) MIN
+			if result < best => best = result
+
+	3. Return best
+
+
+* EVALUATE BOARD:
+
+	1. Who is the current player, who is his opponent?
+
+	2. Scoring system:
+		
+		OFFENSE:
+			I.	 winner 			+1000
+			II.	 center column 		+1
+			III. 2 in row			+1.5
+			IV.  2 in a row			+2
+			V.   3 in row			+2.5
+			VI.  3 in a row			+3
+		DEFENSE:
+			I.   opp win			-1000
+			II.  opp 2 in a row		-3
+			III. opp 3 in a row		-4
+

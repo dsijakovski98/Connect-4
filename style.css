@@ -1,0 +1,173 @@
+*:hover {
+  cursor: default;
+}
+
+*::before, *::after, * {
+  outline: none;
+}
+
+html, body {
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+user-select: none;
+
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: Montserrat;
+  overflow: hidden;
+  background-color: rgb(245, 245, 220);
+}
+
+canvas {
+  /* position: static; */
+  display: block;
+  margin: 0 auto;
+  /* margin-top: 15px; */
+}
+canvas:hover {
+  cursor: pointer;
+}
+
+#winnerLeft, #winnerRight {
+  display: block;
+  margin: auto;
+}
+#winnerLeft {
+  color: red;
+}
+#winnerRight {
+  color: black;
+}
+
+.boxLeft {
+  display: inline-flex;
+  border: 3px ridge #f00;
+  background-image: linear-gradient(to top, transparent, transparent, rgba(255,0,0,0.4), rgba(255,0,0,0.7));
+  border-radius: 15px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 2%;
+  width: 27%;
+  height: 15%;
+}
+
+.instructions{
+  /* display: inline-flex; */
+  border: 5px ridge #f00;
+  background-image: linear-gradient(to top, rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.4), transparent, transparent);
+  box-sizing: border-box;
+  border-radius: 15px ;
+  position: fixed;
+  left: 2%;
+  top: 35%;
+  width: 27%;
+  height: 35%;
+}
+.boxLeft:hover, .instructions:hover{
+  box-shadow: 0 0 10px black;
+}
+.buttonBox:hover, .boxRight:hover {
+  box-shadow: 0 0 10px red;
+} 
+
+.instructions h4 {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  padding: 1px;
+}
+
+
+.buttonBox {
+  border: 5px ridge #000;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), transparent, transparent);
+  box-sizing: border-box;
+  border-radius: 15px ;
+  position: fixed;
+  right: 2%;
+  top: 35%;
+  width: 27%;
+  height: 35%;
+}
+
+
+.boxRight {
+  display: inline-flex;
+  border: 3px ridge #000;
+  background-image: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  border-radius: 15px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 2%;
+  width: 27%;
+  height: 15%;
+}
+
+
+
+button {
+  font-family: Montserrat;
+  font-weight: bolder;
+  color: beige;
+  box-sizing: border-box;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+#reset, #newGame {
+  margin: 4% 2%;
+  margin-bottom: 0%;
+  width: 30%;
+  height: 25%;
+  font-size: 1em;
+}
+
+.cols {
+  margin-top: 5%;
+}
+
+#col7, #col8, #col9, #col10 {
+  font-size: 1.2em;
+  width: 30%;
+  margin: 5px;
+  height: 45px;
+}
+
+.mainMenu {
+  width: 30%;
+  height: 40%;
+  margin: auto;
+  transform: translate(0,50%);
+  display: block;
+  /* border: 2px solid black; */
+  /* border-radius: 5px; */
+  /* background: navy; */
+}
+
+#PvP, #AI {
+  width: 40%;
+  height: 20%;
+  display: block;
+  margin: 30px auto;
+  font-size: 1em;
+}
+
+#think {
+  /* display: none; */
+  visibility: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+}
